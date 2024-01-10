@@ -68,21 +68,18 @@ function getSessionData(){
     return sessionData;    
 }
 const itemPerPage = 4;
-    loadData(getSessionData(), 1, true);
-    function loadData(sData, num,){
+    loadData(getSessionData(), 1);
+    function loadData(sData, num){
         //console.log(sData)
         //console.log(typeof(num));
         //allBox.innerHTML=null;
         //console.log(allBox)
-        const arr = [];
         for(let i = 0; i < sData.length; i++){
             if((i >= (num-1) * itemPerPage) && (i < num * itemPerPage)){
                 console.log(i);
-                const html =  `<div class="box" id="box${i+1}"><img src=${sData[i].image} alt="image"/><h4>${sData[i].title}</h4><div class="details"><p>${sData[i].price}</p><button class="action" id="action${i+1}">Show Details</button></div><div class="descriptionNone" id="description${i+1}"><h4>${sData[i].description}</h4><p>${sData[i].category}</p><p>Ratings : <span>${sData[i].rating.rate}</span></p><p>Ratings Count : <span>${sData[i].rating.count}</span></p></div></div>`;
-                arr.push(html); 
+                allBox.innerHTML +=  `<div class="box" id="box${i+1}"><img src=${sData[i].image} alt="image"/><h4>${sData[i].title}</h4><div class="details"><p>${sData[i].price}</p><button class="action" id="action${i+1}">Show Details</button></div><div class="descriptionNone" id="description${i+1}"><h4>${sData[i].description}</h4><p>${sData[i].category}</p><p>Ratings : <span>${sData[i].rating.rate}</span></p><p>Ratings Count : <span>${sData[i].rating.count}</span></p></div></div>`;
             }
         }
-        allBox.innerHTML=arr.join('');
     }
     document.body.innerHTML += `<div class="pagination" id="pagination1"></div>`
     const pageDiv = document.getElementById("pagination1")
@@ -93,7 +90,7 @@ const itemPerPage = 4;
     //console.log(spanClass);
     for(let i = 0; i < spanClass.length; i++){
         spanClass[i].addEventListener('click',(e)=>{
-            loadData(getSessionData(), Number(e.target.innerHTML), false)
+            loadData(getSessionData(), Number(e.target.innerHTML))
         })
     }
     const buttonClasss = document.getElementsByClassName('action');
