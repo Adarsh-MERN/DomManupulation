@@ -8,7 +8,8 @@ fetch("https://fakestoreapi.com/products")
 .then(data => {
     sessionStorage.setItem('ApiData', JSON.stringify(data));
     
-    //console.log(sessionData);
+    
+    console.log(sessionData);
     
     /*for(let i = 0; i < data.length; i++){
         allBox.innerHTML += `<div class="box" id="box${i+1}"><img src=${data[i].image} alt="image"/><h4>${data[i].title}</h4><div class="details"><p>${data[i].price}</p><button class="action" id="action${i+1}">Show Details</button></div><div class="descriptionNone" id="description${i+1}"><h4>${data[i].description}</h4><p>${data[i].category}</p><p>Ratings:<span>${data[i].rating.rate}</span></p><p>Ratings Count:<span>${data[i].rating.count}</span></p></div></div>`;
