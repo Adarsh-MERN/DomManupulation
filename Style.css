@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
     background-color: aqua;
     display: grid;
@@ -51,3 +56,111 @@ img {
 .details p{
     padding: 10px;
 }
+.cartSpan{
+    display: flex;
+    margin: 0 0 0 auto;
+    height: 30px;
+}
+.cartSpan a{
+    display: inline-block;
+    margin-top: auto;
+}
+.cartLogo{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-top: auto;
+}
+.cartNumber{
+    display: inline-block;
+    margin-bottom: auto;
+}
+.cartContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 25px 0;
+    padding: 5px;
+}
+/* Cart page */
+
+.cartpageCaption{
+    margin: 25px;
+    padding: 25px;
+}
+.cartpageContainer{
+    margin: 25px 25px 0;
+    padding: 25px 25px 0;
+}
+.itemDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemDiv div{
+    margin: 25px;
+    padding: 25px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    flex-basis: 15%;
+    text-align: center; 
+}
+.removeBtn{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}
+.btnAdd, .btnSub, .increase{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: medium;
+}
+.CheckOutDiv{
+    align-items: center;
+    text-align: center;
+}
+.Checkout {
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+}
+/* checkOut Page */
+.Form-Container {
+    background: #071248;
+    width: 70%;
+    padding: 25px;
+    margin: 0 auto;
+}
+.Form-Container h1 {
+    color: white;
+    text-align: center;
+}
+.input-field {
+    width: 100%;
+    height: 25px;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+.Btn {
+    width: 250px;
+    height: 45px;
+    font-size: 15px;
+    margin: 15px auto 0;
+    display: block;
+    text-transform: uppercase;
+}
+.Thankyou-container{
+    margin: 25px;
+    padding: 25px;
+}
+.Thankyou-container h1{
+    text-align: center;
+}
+.info{
+    display: inline-block;
+    margin-top: 25px;
+}
+
